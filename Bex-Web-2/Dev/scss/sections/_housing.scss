@@ -3,29 +3,23 @@
 ============= */
 #housing {
     section {
-
-
         div {
             background-image: url("../img/housing-respon.jpg");
-
         }
     }
 
     article {
         padding: 15px;
-
-        @include md{
+        @include md {
             padding: 15px 50px;
         }
-
-        @include lg{
-            padding: 50px 60px ;
+        @include lg {
+            padding: 50px 60px;
         }
 
         aside {
             margin-left: 15px;
-
-            @include lg{
+            @include lg {
                 margin-left: 0;
             }
 
@@ -35,17 +29,15 @@
                 font-weight: 700;
                 margin-bottom: 10px;
                 margin-top: 30px;
-
-                @include lg{
+                @include lg {
                     margin-top: 60px;
                 };
             }
 
             p {
-                margin: 0 40px 0 0px;
-
-                @include lg{
-                    margin:0 ;
+                margin: 0 40px 0 0;
+                @include lg {
+                    margin: 0;
                 }
             }
         }
@@ -79,23 +71,15 @@
         margin-bottom: 90px;
         margin-top: 30px;
         display: grid;
-        grid-template-areas:
-        "but-title but-title but-title"
-        ". gb-1 ."
-        ". gb-2 ."
-        ". gb-3 .";
-        @include md{
+        grid-template-areas: "but-title but-title but-title" ". gb-1 ." ". gb-2 ." ". gb-3 .";
+        @include md {
             height: 204px;
             padding: 0 30px;
-            margin: 30px 35px 90px 35px;
-            grid-template-areas:
-            "but-title but-title but-title but-title but-title"
-            "gb-1 . gb-2 . gb-3";
+            margin: 30px 35px 90px;
+            grid-template-areas: "but-title but-title but-title but-title but-title" "gb-1 . gb-2 . gb-3";
         }
-
-        @include lg{
-
-            margin: 30px 170px 90px 170px;
+        @include lg {
+            margin: 30px 170px 90px;
         }
 
         li:first-child {
@@ -103,49 +87,37 @@
             font-family: 'Josefin Sans', sans-serif;
             font-size: rem-calc(30);
             text-align: center;
-            grid-area:but-title;
+            grid-area: but-title;
             padding-top: 20px;
-
-            @include sm{
-                font-size:rem-calc(35);
+            @include sm {
+                font-size: rem-calc(35);
             }
-
-            @include md{
+            @include md {
                 padding-top: 30px;
-                font-size:rem-calc(40);
-
+                font-size: rem-calc(40);
             }
         }
 
-        li:nth-child(2){
-            grid-area:gb-1;
-
-
+        li:nth-child(2) {
+            grid-area: gb-1;
         }
 
-        li:nth-child(3){
-            grid-area:gb-2;
-
+        li:nth-child(3) {
+            grid-area: gb-2;
         }
 
-        li:last-child{
-            grid-area:gb-3;
-
+        li:last-child {
+            grid-area: gb-3;
         }
 
         li {
             color: $white;
             font-family: 'Josefin Sans', sans-serif;
             font-size: rem-calc(21);
-
-
-            grid-area:gb;
-            @include sm{
+            grid-area: gb;
+            @include sm {
                 font-size: rem-calc(30);
             }
-
-
-
 
             a:link,
             a:visited {

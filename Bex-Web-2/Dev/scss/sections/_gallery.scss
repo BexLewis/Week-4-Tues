@@ -3,53 +3,30 @@
 ============= */
 #gallery {
     section {
-
         div {
             background-image: url("../img/gallery-respon.jpg");
-
-
         }
     }
 
     ul {
         display: grid;
         grid-gap: 5px;
-        grid-template-areas:
-        "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3"
-        "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3"
-        "gallery-2 gallery-2 gallery-4 gallery-4 gallery-4"
-        "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
+        grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-2 gallery-2 gallery-4 gallery-4 gallery-4" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
         grid-template-rows: repeat(4, 100px);
-
         margin: 40px 10px;
-
-        @include sm{
-            grid-template-areas:
-            "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3"
-            "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3"
-            "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5"
-            "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
+        @include sm {
+            grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-1 gallery-1 gallery-1 gallery-3 gallery-3" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5" "gallery-2 gallery-2 gallery-5 gallery-5 gallery-5";
             grid-template-rows: repeat(4, 130px);
         }
-
-        @include md{
-            grid-template-areas:
-            "gallery-1 gallery-1 gallery-3 gallery-2"
-            "gallery-1 gallery-1 gallery-3 gallery-2"
-            "gallery-4 gallery-4 gallery-5 gallery-5"
-            "gallery-6 gallery-6 gallery-6 gallery-6";
+        @include md {
+            grid-template-areas: "gallery-1 gallery-1 gallery-3 gallery-2" "gallery-1 gallery-1 gallery-3 gallery-2" "gallery-4 gallery-4 gallery-5 gallery-5" "gallery-6 gallery-6 gallery-6 gallery-6";
             grid-template-rows: repeat(4, 150px);
             padding: 0 50px;
             grid-gap: 10px;
         }
-
-        @include lg{
-            grid-template-areas:
-            "gallery-1 gallery-1 gallery-1 gallery-1 gallery-3 gallery-3 gallery-3 gallery-2 gallery-2 gallery-2 gallery-7 gallery-7 gallery-7 gallery-7"
-            "gallery-4 gallery-4 gallery-4 gallery-4 gallery-4 gallery-5 gallery-5 gallery-5 gallery-5 gallery-5 gallery-7  gallery-7  gallery-7 gallery-7";
-            ;
+        @include lg {
+            grid-template-areas: "gallery-1 gallery-1 gallery-1 gallery-1 gallery-3 gallery-3 gallery-3 gallery-2 gallery-2 gallery-2 gallery-7 gallery-7 gallery-7 gallery-7" "gallery-4 gallery-4 gallery-4 gallery-4 gallery-4 gallery-5 gallery-5 gallery-5 gallery-5 gallery-5 gallery-7 gallery-7 gallery-7 gallery-7";
             grid-template-rows: repeat(2, 250px);
-
         }
 
         li {
@@ -75,15 +52,12 @@
         #gallery-4 {
             background-image: url("../img/gallery/gallery-4-res.jpg");
             grid-area: gallery-4;
-
-            @include sm{
+            @include sm {
                 display: none;
             }
-
-            @include md{
+            @include md {
                 display: block;
             }
-
         }
 
         #gallery-5 {
@@ -91,40 +65,32 @@
             grid-area: gallery-5;
         }
 
-        #gallery-6{
+        #gallery-6 {
             background-image: url("../img/gallery/gallery-6-res.jpg");
             grid-area: gallery-6;
-
             display: none;
-
-            @include sm{
+            @include sm {
                 display: none;
             }
-
-            @include md{
+            @include md {
                 display: block;
             }
-
-            @include lg{
+            @include lg {
                 display: none;
-
             }
         }
 
-        #gallery-7{
+        #gallery-7 {
             background-image: url("../img/gallery/gallery-7-res.jpg");
             grid-area: gallery-7;
             display: none;
-
-            @include sm{
+            @include sm {
                 display: none;
             }
-
-            @include md{
+            @include md {
                 display: none;
             }
-
-            @include lg{
+            @include lg {
                 display: block;
                 background-position: -250px;
             }
