@@ -1,0 +1,169 @@
+/* =============
+    Hero-1
+============= */
+#hero-1 {
+    padding-bottom: 30px;
+
+    section {
+
+        grid-template-columns: 30% auto 2%;
+
+        @include sm{
+        grid-template-columns: 25% auto 2%;
+        grid-template-rows:200px;
+        }
+
+        @include md{
+            grid-template-columns: 25% auto 1%;
+        grid-template-rows:400px;
+
+        @include lg{
+            grid-template-columns: 25% auto 1%;
+             grid-template-rows:500px;
+        }
+
+
+
+        }
+
+
+
+        div {
+            background-image: url("../img/hero-1-respon.jpg");
+            background-position: -120px;
+            background-size: cover;
+
+            @include sm{
+            background-position: -140px;
+
+            }
+
+            @include md{
+                background-position: -370px
+            }
+
+            @include lg{
+                background-position: -420px;
+            }
+
+        }
+        h1 {
+            margin-top: 50px;
+            font-weight: 600;
+
+            @include sm{
+                margin-top: 90px;
+            }
+
+            @include md{
+                margin-top: 250px;
+            }
+
+            @include lg{
+                margin-top: 290px;
+            }
+
+            span{
+                display: none;
+
+                @include sm{
+
+                    display: inline-block;
+
+                }
+            }
+
+
+        }
+    }
+
+    #hero-1-text {
+        margin: 0 37px 0 26px;
+        @include md{
+            margin: 10px 150px 10px 150px
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-areas: "col-1 col-2 col-3";
+            grid-gap: 64px;
+            padding: 0px 80px;
+            margin: 75px 0px 100px;
+        }
+
+        article:first-child{
+            grid-area:col-1;
+        }
+
+        article:nth-child(2){
+            grid-area:col-2;
+        }
+
+        article:last-child{
+            grid-area:col-3;
+        }
+
+        article {
+            grid-area:info;
+            display: grid;
+            grid-gap: 17px;
+            grid-template-areas: "icons title" ". paragraph";
+
+            @include md{
+                grid-template-areas:
+                " . icons title ."
+                " paragraph paragraph paragraph paragraph";
+            }
+
+            @include lg{
+            grid-template-areas:
+            "icons title"
+            ". paragraph";
+            }
+
+            i {
+                color: $hero-icons;
+                font-size: rem-calc(27);
+                grid-area: icons;
+                margin-top: 27px;
+            }
+
+            h2 {
+                font-family: 'Assistant', sans-serif;
+                font-size: rem-calc(30);
+                font-weight: 700;
+                grid-area: title;
+                margin-top: 25px;
+            }
+
+            p {
+                font-family: 'Heebo', sans-serif;
+                font-size: rem-calc(17);
+                grid-area: paragraph;
+                line-height: rem-calc(23);
+                text-align: justify;
+
+                @include md{
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                @include lg{
+                    text-align: justify;
+                    margin-top: 10px;
+                }
+
+                a:link,
+                a:visited {
+                    color: $link-accent;
+                    font-size: rem-calc(17);
+                    font-weight: 600;
+                }
+
+                a:active,
+                a:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
